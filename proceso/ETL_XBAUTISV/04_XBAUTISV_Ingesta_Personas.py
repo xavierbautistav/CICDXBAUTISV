@@ -11,14 +11,16 @@ from pyspark.sql.types import *
 dbutils.widgets.text("container", "raw")
 dbutils.widgets.text("catalogo", "catalog_xbautisv")
 dbutils.widgets.text("esquema", "bronze")
+dbutils.widgets.text("storageName", "adlsxbautisv")
 
 # COMMAND ----------
 
 container = dbutils.widgets.get("container")
 catalogo = dbutils.widgets.get("catalogo")
 esquema = dbutils.widgets.get("esquema")
+storageName = dbutils.widgets.get("storageName")
 
-ruta = f"abfss://{container}@adlsxbautisv.dfs.core.windows.net/personas.csv"
+ruta = f"abfss://{container}@{storageName}.dfs.core.windows.net/personas.csv"
 
 # COMMAND ----------
 
