@@ -133,7 +133,7 @@ jobs:
                 "notebook_path": "/py/scripts/main/01_XBAUTISV_Preparacion_Ambiente",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "storageLocation": "storage"
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -147,9 +147,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/02_XBAUTISV_Ingesta_Compras",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "container": "raw",
+                  "esquema": "bronze"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -168,9 +168,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/03_XBAUTISV_Ingesta_Devoluciones",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "container": "raw",
+                  "esquema": "bronze"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -189,9 +189,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/04_XBAUTISV_Ingesta_Personas",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "container": "raw",
+                  "esquema": "bronze"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -210,9 +210,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/05_XBAUTISV_Ingesta_Productos",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "container": "raw",
+                  "esquema": "bronze"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -231,9 +231,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/06_XBAUTISV_Ingesta_Clientes",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "container": "raw",
+                  "esquema": "bronze"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -252,9 +252,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/07_XBAUTISV_Transformacion",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "esquema_source": "bronze",
+                  "esquema_sink": "silver"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -275,9 +275,9 @@ jobs:
                 "notebook_path": "/py/scripts/main/08_XBAUTISV_Carga_Informacion",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "inputPath": "/data/input",
-                  "outputPath": "/data/output",
-                  "processDate": "$(date +%Y-%m-%d)"
+                  "catalogo": "catalog_xbautisv",
+                  "esquema_source": "silver",
+                  "esquema_sink": "gold"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
