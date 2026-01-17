@@ -131,10 +131,7 @@ jobs:
               "description": "Ejecuta notebook 01_XBAUTISV_Preparacion_Ambiente con parámetros",
               "notebook_task": {
                 "notebook_path": "/py/scripts/main/01_XBAUTISV_Preparacion_Ambiente",
-                "source": "WORKSPACE",
-                "base_parameters": {
-                  "storageName": "adlxbautisvprd"
-                }
+                "source": "WORKSPACE"
               },
               "existing_cluster_id": "$CLUSTER_ID",
               "timeout_seconds": 3600,
