@@ -1,6 +1,7 @@
 # Databricks notebook source
 # DBTITLE 1,Cell 1
 # MAGIC %sql
+# MAGIC
 # MAGIC DROP CATALOG IF EXISTS xbautisv_prd CASCADE;
 # MAGIC
 # MAGIC CREATE CATALOG IF NOT EXISTS xbautisv_prd;
@@ -8,8 +9,7 @@
 # MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.raw;
 # MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.bronze;
 # MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.silver;
-# MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.golden;
-# MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.exploratory;
+# MAGIC CREATE SCHEMA IF NOT EXISTS xbautisv_prd.gold;
 # MAGIC
 # MAGIC CREATE VOLUME IF NOT EXISTS xbautisv_prd.raw.datasets;
 # MAGIC
