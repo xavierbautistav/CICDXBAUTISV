@@ -144,9 +144,10 @@ jobs:
                 "notebook_path": "/py/scripts/main/02_XBAUTISV_Ingesta_Compras",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "container": "raw",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -165,9 +166,10 @@ jobs:
                 "notebook_path": "/py/scripts/main/03_XBAUTISV_Ingesta_Devoluciones",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "container": "raw",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -186,9 +188,10 @@ jobs:
                 "notebook_path": "/py/scripts/main/04_XBAUTISV_Ingesta_Personas",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "container": "raw",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -207,9 +210,10 @@ jobs:
                 "notebook_path": "/py/scripts/main/05_XBAUTISV_Ingesta_Productos",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "container": "raw",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -228,9 +232,10 @@ jobs:
                 "notebook_path": "/py/scripts/main/06_XBAUTISV_Ingesta_Clientes",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "container": "raw",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "storageName": "adlxbautisvprd"
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -249,7 +254,7 @@ jobs:
                 "notebook_path": "/py/scripts/main/07_XBAUTISV_Transformacion",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "esquema_source": "bronze",
                   "esquema_sink": "silver"
                 }
@@ -272,7 +277,7 @@ jobs:
                 "notebook_path": "/py/scripts/main/08_XBAUTISV_Carga_Informacion",
                 "source": "WORKSPACE",
                 "base_parameters": {
-                  "catalogo": "catalog_xbautisv",
+                  "catalogo": "xbautisv_prd",
                   "esquema_source": "silver",
                   "esquema_sink": "gold"
                 }
