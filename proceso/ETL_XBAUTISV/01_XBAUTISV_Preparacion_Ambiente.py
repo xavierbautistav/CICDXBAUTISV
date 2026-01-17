@@ -13,22 +13,22 @@
 # MAGIC
 # MAGIC CREATE VOLUME IF NOT EXISTS catalog_xbautisv.raw.datasets;
 # MAGIC
-# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-raw`
-# MAGIC URL 'abfss://raw@adlsxbautisv.dfs.core.windows.net/'
-# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisv)
+# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-raw-prd`
+# MAGIC URL 'abfss://raw@adlxbautisvprd.dfs.core.windows.net/'
+# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisvprd)
 # MAGIC COMMENT 'Ubicación externa para los archivos del raw del Data Lake';
 # MAGIC
-# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-bronze`
-# MAGIC URL 'abfss://bronze@adlsxbautisv.dfs.core.windows.net/'
-# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisv)
+# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-bronze-prd`
+# MAGIC URL 'abfss://bronze@adlxbautisvprd.dfs.core.windows.net/'
+# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisvprd)
 # MAGIC COMMENT 'Ubicación externa para los archivos del raw del Data Lake';
 # MAGIC
-# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-silver`
-# MAGIC URL 'abfss://silver@adlsxbautisv.dfs.core.windows.net/'
-# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisv)
+# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-silver-prd`
+# MAGIC URL 'abfss://silver@adlxbautisvprd.dfs.core.windows.net/'
+# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisvprd)
 # MAGIC COMMENT 'Ubicación externa para los archivos del raw del Data Lake';
 # MAGIC
-# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-golden`
-# MAGIC URL 'abfss://golden@adlsxbautisv.dfs.core.windows.net/'
-# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisv)
+# MAGIC CREATE EXTERNAL LOCATION IF NOT EXISTS `exlt-golden-prd`
+# MAGIC URL 'abfss://golden@adlxbautisvprd.dfs.core.windows.net/'
+# MAGIC WITH (STORAGE CREDENTIAL credentialxbautisvprd)
 # MAGIC COMMENT 'Ubicación externa para los archivos del raw del Data Lake';
