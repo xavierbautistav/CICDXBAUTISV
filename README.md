@@ -1,4 +1,7 @@
 # CICDXBAUTISV
+**Nombre:** Xavier Bautista 
+**Caso:** Base Supertienda/Superstore de Tableau 
+
 Repositorio GIT para el trabajo final de curso
 
 # Trabajo Final – Ingeniería de Datos e IA con Databricks
